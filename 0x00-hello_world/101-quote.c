@@ -2,6 +2,7 @@
 #include <string.h>
 #include <unistd.h>
 
+#define STRING "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
 
 /**
 * main - main
@@ -10,8 +11,8 @@
 */
 int main(void)
 {
-	int len = strlen("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	int len = strlen(STRING);
 
-	write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", len);
+	write(1, STRING, len);
 	return (1);
 }
