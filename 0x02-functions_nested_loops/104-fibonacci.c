@@ -7,25 +7,17 @@
   */
 int main(void)
 {
-	int i = 0;
-	unsigned long long int j = 1, k = 2;
+	unsigned long long int fib[100];
 
-	while (i < 98)
-	{
-		if (i == 0)
-			printf("%ld", j);
-		else if (i == 1)
-			printf(", %ld", k);
-		else
-		{
-			k += j;
-			j = k - j;
-			printf(", %ld", k);
-		}
+	fib[0] = 1;
+	fib[1] = 2;
 
-		++i;
+	printf("%llu\n%llu\n", fib[0], fib[1]);
+
+	for (int i = 2; i < 98; i++) {
+		fib[i] = fib[i - 1] + fib[i - 2];
+		printf("%llu\n", fib[i]);
 	}
 
-	printf("\n");
-	return (0);
+	return 0;
 }
