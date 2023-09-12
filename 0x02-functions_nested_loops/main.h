@@ -1,2 +1,2 @@
 int _putchar(char);
-void jack_bauer(void);
+void times_table(void);
