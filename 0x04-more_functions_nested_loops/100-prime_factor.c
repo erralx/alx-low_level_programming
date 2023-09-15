@@ -4,13 +4,13 @@
 /**
  * main - entry
  *
- * Return: 0 
+ * Return: 0
  */
 int main(void)
 {
 	long n = 612852475143;
 	long f;
- 
+
 	long i = 0;
 
 	double n_sqrt = sqrt(n);
