@@ -6,7 +6,7 @@
  */
 void print_number(int n)
 {
-	int n_recur = n;
+	unsigned int n_recur = n;
 
 	if (n < 0)
 	{
@@ -22,5 +22,5 @@ void print_number(int n)
 		print_number(n_recur);
 	}
 
-	_putchar(n % 10 + '0');
+	_putchar((unsigned int)n % 10 + '0');
 }
