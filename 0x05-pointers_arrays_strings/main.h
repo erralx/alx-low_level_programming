@@ -11,3 +11,4 @@ void puts_half(char *);
 void print_array(int *a, int n);
 char *_strcpy(char *, char *);
 int string_length(char *);
+int _atoi(char *s);
