@@ -6,21 +6,19 @@
  */
 void print_rev(char *s)
 {
-	char *s_start = s;
-	char *s_end = s;
+	int num_chars = 0;
 
 	while (*s != '\0')
 	{
+		num_chars++;
 		s++;
-		s_end++;
 	}
 
-	while (1)
+	s--;
+
+	for (; num_chars > 0; num_chars--, s--)
 	{
-		_putchar(*s_end);
-		if (s_end == s_start)
-			break;
-		s_end--;
+		_putchar(*s);
 	}
 
 	_putchar('\n');
