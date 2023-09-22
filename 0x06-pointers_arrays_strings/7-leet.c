@@ -6,30 +6,29 @@
  */
 char *leet(char *str)
 {
-	int i;
+	char *letters, *replace;
+	int count, count2;
 
-	for (i = 0; str[i] != '\0'; i++)
+	letters = "aAeEoOtTlL";
+	replace = "4433007711";
+
+	count = 0;
+
+	while (str[count] != '\0')
 	{
-		if (str[i] == 'a' || str[i] == 'A')
+		count2 = 0;
+
+		while (letters[count2] != '\0')
 		{
-			str[i] = '4';
+			if (str[count] == letters[count2])
+			{
+				str[count] = replace[count2];
+			}
+
+			count2++;
 		}
-		else if (str[i] == 'e' || str[i] == 'E')
-		{
-			str[i] = '3';
-		}
-		else if (str[i] == 'o' || str[i] == 'O')
-		{
-			str[i] = '0';
-		}
-		else if (str[i] == 't' || str[i] == 'T')
-		{
-			str[i] = '7';
-		}
-		else if (str[i] == 'l' || str[i] == 'L')
-		{
-			str[i] = '1';
-		}
+
+		count++;
 	}
 
 	return (str);
