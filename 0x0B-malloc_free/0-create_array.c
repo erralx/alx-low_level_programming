@@ -13,7 +13,7 @@ char *create_array(unsigned int size, char c)
 	char *arr;
 	unsigned int i;
 
-	// printf("Running create_array with size: %u, char: %c", size, c);
+	/* printf("Running create_array with size: %u, char: %c", size, c); */
 
 	if (size == 0)
 	{
@@ -33,7 +33,7 @@ char *create_array(unsigned int size, char c)
 		arr[i] = c;
 	}
 
-	// printf("Ran create_array, returning...");
+	/* printf("Ran create_array, returning..."); */
 
 	return (arr);
 }
