@@ -10,7 +10,7 @@
  * 0 if sum is 0 or no numbers passed,
  * sum of arguments otherwise
  */
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	int i, j, sum = 0;
 
@@ -25,7 +25,7 @@ int main(int argc, char** argv)
 		j = 0;
 		while (argv[i][j] != '\0')
 		{
-			if (argv[i][j] < '0' || argv[i][j] > '9' )
+			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
 				printf("Error\n");
 				return (1);
