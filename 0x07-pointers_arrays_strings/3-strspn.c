@@ -10,37 +10,17 @@ unsigned int contains(char *str, char c);
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int len = 0, i, j, res;
+	unsigned int len = 0, i, res;
 
-	for (i = 0;; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (accept[i] == '\0')
+		res = contains(accept, s[i]);
+		if (res == 0)
 		{
-			break;
+			return (len);
 		}
 
-		for (j = 0;; j++)
-		{
-			if (s[j] == '\0')
-			{
-				return (0);
-			}
-
-			if (s[j] == accept[i])
-			{
-				if (j + 1 > len)
-					len = j + 1;
-				break;
-			}
-
-			res = contains(accept, s[j]);
-			if (res == 0)
-			{
-				return (0);
-			}
-
-			continue;
-		}
+		len++;
 	}
 
 	return (len);
