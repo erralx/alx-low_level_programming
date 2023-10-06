@@ -1,5 +1,3 @@
-#include <limits.h>
-
 unsigned int contains(char *str, char c);
 
 /**
@@ -49,7 +47,11 @@ unsigned int _strspn(char *s, char *accept)
 }
 
 /**
+ * contains - returns whether a string contains a char
+ * @str: string to search
+ * @c: char to find
  *
+ * Return: 1 if str contains c, 0 otherwise
 */
 unsigned int contains(char *str, char c)
 {
