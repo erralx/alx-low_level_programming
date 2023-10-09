@@ -1,5 +1,17 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
+
+/**
+ * printstr - prints a string
+ * @s: string to print
+ */
+void printstr(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		_putchar(s[i]);
+}
 
 /**
  * getDigit - gets the digit as int
@@ -117,7 +129,7 @@ char *_padstart(char *s, int len)
 
 	if (len < s_len)
 	{
-		printf("[_padStart] Error: len < s_len");
+		printstr("[_padStart] Error: len < s_len");
 		exit(1);
 	}
 
@@ -230,7 +242,7 @@ int get_num_len(char *num)
 	{
 		if (!isDigit(num[i]))
 		{
-			printf("Error\n");
+			printstr("Error\n");
 			exit(98);
 		}
 
@@ -257,7 +269,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		printf("Error\n");
+		printstr("Error\n");
 		exit(98);
 	}
 
@@ -273,7 +285,8 @@ int main(int argc, char **argv)
 
 	res = rmv_leadz(res);
 
-	printf("%s\n", res);
+	printstr(res);
+	printstr("\n");
 
 	return (0);
 }
