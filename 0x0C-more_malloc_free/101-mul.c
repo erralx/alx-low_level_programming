@@ -97,6 +97,11 @@ char *rmv_leadz(char *s)
 		i++;
 	}
 
+	if (n_len == 0)
+	{
+		return "0";
+	}
+
 	n = malloc(n_len);
 
 	for (i = 0, j = 0, isLead = 1; s[i] != '\0'; i++)
