@@ -60,7 +60,7 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	int i, j;
-	struct printer_t printers[] = {
+	printer_t printers[] = {
 		{ 'c', p_char },
 		{ 'i', p_int },
 		{ 'f', p_float },

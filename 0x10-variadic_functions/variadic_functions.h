@@ -9,14 +9,16 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
 /**
- * struct printer_t - printer struct
- * @specifier: format of argument to print
+ * struct printer - printer struct
+ * @specifier: format specifier
  * @f: printer function
  */
-struct printer_t
+struct printer
 {
 	char specifier;
 	void (*f)(va_list ap);
 };
+
+typedef struct printer printer_t;
 
 #endif /* MAIN_H */
