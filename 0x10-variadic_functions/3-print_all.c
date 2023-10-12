@@ -40,9 +40,12 @@ void p_string(va_list ap)
 	char *s = va_arg(ap, char *);
 
 	if (s == NULL)
+	{
 		printf("(nil)");
-	else
-		printf("%s", s);
+		return;
+	}
+
+	printf("%s", s);
 }
 
 /**
